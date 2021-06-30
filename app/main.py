@@ -6,9 +6,6 @@ from app.routers import unsplash
 from jinja2 import Environment
 from app.library.helpers import *
 
-env = Environment()
-env.filters["nl2br"] = nl2br
-
 app = FastAPI()
 
 app.include_router(unsplash.router)
