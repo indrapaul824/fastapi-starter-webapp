@@ -10,7 +10,7 @@
 {% include 'include/sidebar.html' %}
 <main role="main" class="container">
     <div class="row">
-        {{data.text|safe}}
+        {% autoescape false %} {{data.text | replace('\n', '<br>') }} {% endautoescape %}
     </div>
 </main><!-- /.container -->
 
