@@ -3,8 +3,11 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from app.routers import unsplash
+from jinja2 import Environment
+from app.library.helpers import *
 
-from .library.helpers import *
+env = Environment()
+env.filters["nl2br"] = nl2br
 
 app = FastAPI()
 
