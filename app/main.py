@@ -3,7 +3,6 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from app.routers import unsplash
-from jinja2 import Environment
 from app.library.helpers import *
 
 app = FastAPI()
