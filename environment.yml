@@ -1,9 +1,9 @@
-name: fastapi-3811
+name: fastapi-38
 channels:
   - defaults
   - conda-forge
 dependencies:
-  - python=3.8.11
+  - python=3.8
   - pip
   - pip:
     - pip-tools
