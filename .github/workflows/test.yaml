@@ -12,8 +12,5 @@ jobs:
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          apt-get -y install make
-          make conda-update
-          conda activate fastapi-38
-          make pip-tools
+          pip install -r requirements.txt
           pytest -v
