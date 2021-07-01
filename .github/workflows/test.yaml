@@ -14,5 +14,6 @@ jobs:
         run: |
           apt-get -y install make
           make conda-update
+          conda activate fastapi-38
           make pip-tools
           pytest -v
