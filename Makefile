@@ -9,5 +9,9 @@ conda-update:
 # Compile and install exact pip packages
 pip-tools:
 	pip install pip-tools
-	pip-compile requirements.in
-	pip-sync requirements.txt
+	pip-compile requirements/requirements.in
+	pip-sync requirements/requirements.txt
+
+# Run developement server from root directory
+run-app:
+	uvicorn app.main:app --reload
