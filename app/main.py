@@ -2,7 +2,7 @@ from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from app.routers import unsplash, twoforms, accordion
+from app.routers import upload, unsplash, twoforms, accordion
 from app.library.helpers import *
 
 app = FastAPI()
@@ -11,6 +11,7 @@ app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
+app.include_router(upload.router)
 app.include_router(unsplash.router)
 app.include_router(twoforms.router)
 app.include_router(accordion.router)
