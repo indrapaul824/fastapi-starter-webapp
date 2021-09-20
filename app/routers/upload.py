@@ -5,6 +5,7 @@ from fastapi.templating import Jinja2Templates
 router = APIRouter()
 templates = Jinja2Templates(directory="templates/")
 
+
 @router.get("/upload", response_class=HTMLResponse)
 def get_upload(request: Request):
     result = "Hello from upload.py"
