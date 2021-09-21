@@ -51,6 +51,7 @@
 {% block scripts %}
 {{ super() }}
 
+<script type="module" src="{{ url_for('static', path='/js/imagehelper.js') }}"></script>
 <script type="module" src="{{ url_for('static', path='/js/dragdrop.js') }}"></script>
 
 {% endblock %}
