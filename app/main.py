@@ -18,12 +18,12 @@ app.include_router(accordion.router)
 
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
-    data = openFile("home.md")
+    data = openfile("home.md")
     return templates.TemplateResponse("page.html", {"request": request, "data": data})
 
 
 
 @app.get("/page/{page_name}", response_class=HTMLResponse)
 async def page(request: Request, page_name: str):
-    data = openFile(page_name + ".md")
+    data = openfile(page_name + ".md")
     return templates.TemplateResponse("page.html", {"request": request, "data": data})
