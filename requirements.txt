@@ -32,7 +32,7 @@ markupsafe==2.0.1
     # via jinja2
 packaging==20.9
     # via pytest
-pillow==8.3.2
+pillow==9.0.0
     # via -r requirements.in
 pluggy==0.13.1
     # via pytest
